@@ -32,7 +32,11 @@ RUN yum install -y \
 	libtool \
 	strace \
 	iproute \
-	traceroute
+	traceroute \
+	man-db \
+	vim-common \
+	psmisc
+	
 
 ### Let's enable systemd on the container
 RUN (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == \
