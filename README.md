@@ -22,6 +22,15 @@ git clone https://github.com/rpavlyuk/docker-centos7-gcc7.3-glibc2.19.git && \
   cd docker-centos7-gcc7.3-glibc2.19 && 
   ./build.sh
 ```
+
+You can use the container to build your own ones on top of it. Make sure, you have the following first lines in your `Dockerfile`:
+```
+FROM docker.io/rpavlyuk/c7-gcc7.3-glib2.19
+MAINTAINER "John Doe" <jonny.doe@gmail.com>
+
+
+```
+
 **NOTE:** It takes some to build it since GCC and GLIBC compilation takes a while. On my Core i7 CPU it takes nearly 2+ hours.
 
 ## Credits
