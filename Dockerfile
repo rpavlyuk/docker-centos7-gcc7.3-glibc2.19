@@ -69,6 +69,9 @@ RUN cd gcc-7.3.0 && \
 	make install && \
 	rm -rf /tmp/gcc-7.3.0	
 
+# Clean the garbage
+RUN rm -rf /usr/local/lib/../lib64/libstdc++.so.6.0.24-gdb.py
+
 # Update GLIBC
 RUN yum groupinstall -y "Development tools"
 RUN yum install -y \
